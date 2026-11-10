@@ -1,58 +1,58 @@
 /* ==========================================================================
-   SaaSFlow Design System - Taste-Skill Anti-Slop Specification
-   High-Taste Developer Console Styling (Stripe / Vercel / Linear Standard)
+   SaaSFlow Design System - Ardia.dev Aesthetic Standard
+   Warm organic paper ground (#f1ece2), brutalist typography, painterly 3D
    ========================================================================== */
 
 :root {
-  /* Color Palette */
-  --color-primary: #4F46E5;
-  --color-primary-hover: #4338CA;
-  --color-primary-light: #EEF2FF;
-  --color-primary-glow: rgba(79, 70, 229, 0.15);
+  /* Ardia Organic Color Palette */
+  --bg-app: #f1ece2;             /* Ardia linen theme color */
+  --bg-card: #FAF7F2;           /* Warm cream parchment */
+  --bg-card-subtle: #ECE6DA;
+  --bg-hover: #E8E1D2;
+  --bg-dark-pill: #1C1917;       /* Deep obsidian stone */
+  --bg-dark-pill-hover: #292524;
   
-  --color-text-primary: #0F172A;
-  --color-text-secondary: #475569;
-  --color-text-muted: #94A3B8;
+  --color-text-primary: #1C1917; /* Deep brutalist stone ink */
+  --color-text-secondary: #57534E;
+  --color-text-muted: #8C8275;
 
-  --color-success: #059669;
-  --color-success-bg: #ECFDF5;
-  --color-success-border: #A7F3D0;
+  --color-primary: #1C1917;      /* Ardia deep ink primary */
+  --color-primary-hover: #292524;
+  --color-accent-sun: #EA580C;   /* Radiant sunset orange */
+  --color-accent-grass: #3F6212; /* Mossy meadow green */
   
-  --color-warning: #D97706;
-  --color-warning-bg: #FFFBEB;
+  --color-success: #15803D;
+  --color-success-bg: #DCFCE7;
+  --color-success-border: #86EFAC;
+  
+  --color-warning: #B45309;
+  --color-warning-bg: #FEF3C7;
   --color-warning-border: #FDE68A;
   
-  --color-error: #DC2626;
-  --color-error-bg: #FEF2F2;
-  --color-error-border: #FECACA;
+  --color-error: #B91C1C;
+  --color-error-bg: #FEE2E2;
+  --color-error-border: #FCA5A5;
 
-  /* Surfaces & Backgrounds */
-  --bg-app: #F8FAFC;
-  --bg-card: #FFFFFF;
-  --bg-card-subtle: #F1F5F9;
-  --bg-hover: #F8FAFC;
-  --bg-dark: #0B0F19;
-  --bg-dark-surface: #111827;
-  
-  --border-color: #E2E8F0;
-  --border-color-subtle: #F1F5F9;
-  --border-focus: #6366F1;
+  --border-color: #E2D9CC;
+  --border-color-strong: #D5C9B8;
+  --border-focus: #1C1917;
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Radius & Shadows */
   --radius-xs: 4px;
   --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-full: 9999px;
 
-  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
-  --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-  --shadow-card-hover: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
-  --shadow-glow: 0 0 20px -2px rgba(79, 70, 229, 0.25);
+  --shadow-subtle: 0 1px 2px 0 rgba(28, 25, 23, 0.04);
+  --shadow-card: 0 4px 12px -2px rgba(28, 25, 23, 0.05), 0 1px 3px -1px rgba(28, 25, 23, 0.04);
+  --shadow-card-hover: 0 12px 28px -4px rgba(28, 25, 23, 0.08), 0 4px 8px -2px rgba(28, 25, 23, 0.04);
+  --shadow-pill: 0 4px 14px 0 rgba(28, 25, 23, 0.15);
 }
 
 /* Reset & Base */
@@ -71,61 +71,91 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
-/* Subtle architectural grid pattern background */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 100% 0%, rgba(79, 70, 229, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 0% 100%, rgba(139, 92, 246, 0.03) 0%, transparent 40%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Typography Scale */
-h1 {
-  font-size: 1.75rem;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--color-text-primary);
+  line-height: 1.15;
 }
 
-h2 {
-  font-size: 1.35rem;
+h1 { font-size: 2rem; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.15rem; }
+p { color: var(--color-text-secondary); font-size: 0.95rem; }
+
+/* Massive Brutalist Headline (like TOUCH GRASS on ardia.dev) */
+.hero-title {
+  font-size: clamp(3.8rem, 11vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.86;
+  text-transform: uppercase;
+  letter-spacing: -0.045em;
+  color: #1C1917;
+  user-select: none;
+}
+
+/* Ardia Dual-Cell Pill Button */
+.ardia-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg-dark-pill);
+  color: #FAF7F2;
+  border-radius: var(--radius-full);
+  text-decoration: none;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow-pill);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
 }
 
-h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--color-text-primary);
+.ardia-btn-pill:hover {
+  background-color: var(--bg-dark-pill-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(28, 25, 23, 0.22);
 }
 
-p {
-  color: var(--color-text-secondary);
-  font-size: 0.9rem;
+.ardia-btn-pill:active {
+  transform: scale(0.98);
 }
 
-/* Buttons (Micro-interactions with subtle press) */
+.ardia-btn-cell-main {
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+.ardia-btn-cell-sub {
+  padding: 0.75rem 1.1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #D6D3D1;
+  letter-spacing: 0.05em;
+}
+
+/* Standard Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   font-family: var(--font-sans);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.85rem;
-  padding: 0.55rem 1rem;
-  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-full);
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
@@ -145,36 +175,28 @@ p {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: #FFFFFF;
-  box-shadow: 0 1px 2px 0 rgba(79, 70, 229, 0.2);
+  color: #FAF7F2;
+  box-shadow: var(--shadow-subtle);
 }
 .btn-primary:hover:not(:disabled) {
   background-color: var(--color-primary-hover);
-  box-shadow: 0 4px 12px 0 rgba(79, 70, 229, 0.28);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background-color: #FFFFFF;
+  background-color: #FAF7F2;
   color: var(--color-text-primary);
   border-color: var(--border-color);
   box-shadow: var(--shadow-subtle);
 }
 .btn-secondary:hover:not(:disabled) {
-  background-color: #F8FAFC;
-  border-color: #CBD5E1;
+  background-color: var(--bg-hover);
+  border-color: var(--border-color-strong);
 }
 
 .btn-success {
-  background-color: var(--color-success);
-  color: #FFFFFF;
-}
-.btn-success:hover:not(:disabled) {
-  background-color: #047857;
-}
-
-.btn-danger {
-  background-color: var(--color-error);
-  color: #FFFFFF;
+  background-color: #2D5A27;
+  color: #FAF7F2;
 }
 
 .btn:disabled {
@@ -215,14 +237,14 @@ p {
 }
 
 .badge-neutral {
-  background-color: #F1F5F9;
-  color: #475569;
+  background-color: var(--bg-card-subtle);
+  color: var(--color-text-secondary);
   border: 1px solid var(--border-color);
 }
 
 /* Cards & Layout */
 .app-container {
-  max-width: 1260px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 1.5rem 1.25rem;
 }
@@ -239,6 +261,7 @@ p {
 .card-interactive:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-color-strong);
 }
 
 .grid-2 {
@@ -276,7 +299,7 @@ table {
 }
 
 th {
-  background-color: #F8FAFC;
+  background-color: #ECE6DA;
   padding: 0.85rem 1.1rem;
   font-weight: 700;
   color: var(--color-text-secondary);
@@ -298,7 +321,7 @@ tr:last-child td {
 }
 
 tr:hover td {
-  background-color: #F8FAFC;
+  background-color: #F5EFE4;
 }
 
 /* Inputs & Form Controls */
@@ -317,23 +340,24 @@ label {
 
 input, select, textarea {
   width: 100%;
-  padding: 0.65rem 0.9rem;
+  padding: 0.65rem 0.95rem;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   font-family: inherit;
   font-size: 0.875rem;
   color: var(--color-text-primary);
-  background-color: #FFFFFF;
+  background-color: #FAF7F2;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px var(--color-primary-glow);
+  box-shadow: 0 0 0 3px rgba(28, 25, 23, 0.12);
+  background-color: #FFFFFF;
 }
 
-/* Progress / Quota Bar */
+/* Quota Progress Bar */
 .quota-bar-wrapper {
   width: 100%;
 }
@@ -349,7 +373,7 @@ input:focus, select:focus, textarea:focus {
 .quota-bar-track {
   width: 100%;
   height: 8px;
-  background-color: #E2E8F0;
+  background-color: #E2D9CC;
   border-radius: var(--radius-full);
   overflow: hidden;
   position: relative;
@@ -362,76 +386,55 @@ input:focus, select:focus, textarea:focus {
 }
 
 .quota-normal {
-  background: linear-gradient(90deg, #10B981 0%, #059669 100%);
+  background: linear-gradient(90deg, #4d6828 0%, #2D5A27 100%);
 }
 
 .quota-warning {
-  background: linear-gradient(90deg, #F59E0B 0%, #D97706 100%);
+  background: linear-gradient(90deg, #F59E0B 0%, #B45309 100%);
 }
 
 .quota-critical {
-  background: linear-gradient(90deg, #EF4444 0%, #DC2626 100%);
-  box-shadow: 0 0 8px rgba(220, 38, 38, 0.4);
+  background: linear-gradient(90deg, #EF4444 0%, #B91C1C 100%);
+  box-shadow: 0 0 8px rgba(185, 28, 28, 0.4);
 }
 
 /* Code & Mono Elements */
 .code-pill {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  background-color: #F1F5F9;
+  background-color: #ECE6DA;
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-xs);
   border: 1px solid var(--border-color);
-  color: #334155;
-  font-weight: 500;
+  color: #292524;
+  font-weight: 600;
 }
 
-/* Status Dot Pulse */
+/* Pulse Dot */
 .pulse-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--color-success);
-  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  background-color: #2D5A27;
+  box-shadow: 0 0 0 0 rgba(45, 90, 39, 0.7);
   animation: pulse-ring 1.8s infinite;
 }
 
 @keyframes pulse-ring {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-  }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(45, 90, 39, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(45, 90, 39, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(45, 90, 39, 0); }
 }
 
-/* Spin animation */
-.spin {
-  animation: spin 1s linear infinite;
-}
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Responsive Breakpoints */
+/* Responsive Queries */
 @media (max-width: 991px) {
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-  .grid-2, .grid-3, .grid-4 {
-    grid-template-columns: 1fr;
-  }
-  .app-container {
-    padding: 1rem 0.85rem;
-  }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .app-container { padding: 1rem 0.85rem; }
+  .ardia-btn-pill { flex-direction: column; width: 100%; border-radius: var(--radius-md); }
+  .ardia-btn-cell-sub { border-left: none; border-top: 1px solid rgba(255, 255, 255, 0.15); width: 100%; text-align: center; }
+  .ardia-btn-cell-main { width: 100%; justify-content: center; }
 }
