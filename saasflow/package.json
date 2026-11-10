@@ -1,0 +1,25 @@
+{
+  "name": "saasflow-monorepo",
+  "version": "1.1.0",
+  "description": "SaaSFlow - Simulated API Gateway, Rate Limiting & Billing Console",
+  "private": true,
+  "scripts": {
+    "start": "node server/src/server.js",
+    "test": "node server/src/tests/acceptance.test.js",
+    "seed:csv": "node scripts/csvToJson.js",
+    "build": "cd client && npm.cmd run build",
+    "server": "cd server && npm.cmd run dev",
+    "client": "cd client && npm.cmd run dev"
+  },
+  "keywords": [
+    "rate-limiting",
+    "api-gateway",
+    "metered-billing",
+    "fixed-window",
+    "token-bucket",
+    "saas"
+  ],
+  "author": "Neel Raj & Divyanshu Baghel",
+  "license": "ISC"
+}
+

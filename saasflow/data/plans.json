@@ -1,0 +1,48 @@
+[
+  {
+    "id": "free",
+    "name": "Free",
+    "rateLimitPerMin": 5,
+    "monthlyLimit": 1000,
+    "baseFeePaise": 0,
+    "overageRatePer1kPaise": 0,
+    "features": [
+      "5 requests / minute",
+      "1,000 requests / month included",
+      "Community support",
+      "Standard latency"
+    ]
+  },
+  {
+    "id": "starter",
+    "name": "Starter",
+    "rateLimitPerMin": 20,
+    "monthlyLimit": 50000,
+    "baseFeePaise": 99900,
+    "overageRatePer1kPaise": 4000,
+    "features": [
+      "20 requests / minute",
+      "50,000 requests / month included",
+      "₹40 per 1,000 overage calls",
+      "Email support",
+      "Basic analytics"
+    ]
+  },
+  {
+    "id": "pro",
+    "name": "Pro",
+    "rateLimitPerMin": 60,
+    "monthlyLimit": 200000,
+    "baseFeePaise": 299900,
+    "overageRatePer1kPaise": 3000,
+    "features": [
+      "60 requests / minute",
+      "200,000 requests / month included",
+      "₹30 per 1,000 overage calls",
+      "Priority 24/7 support",
+      "Real-time burst handling",
+      "Custom alerts"
+    ]
+  }
+]
+
