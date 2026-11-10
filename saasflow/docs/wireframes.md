@@ -313,3 +313,4 @@ This document contains responsive layout wireframes comparing **Laptop (≥992px
 |                                                                             |
 +-----------------------------------------------------------------------------+
 ```
+
